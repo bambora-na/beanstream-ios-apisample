@@ -1,0 +1,65 @@
+PODS:
+  - AFNetworking (2.6.0):
+    - AFNetworking/NSURLConnection (= 2.6.0)
+    - AFNetworking/NSURLSession (= 2.6.0)
+    - AFNetworking/Reachability (= 2.6.0)
+    - AFNetworking/Security (= 2.6.0)
+    - AFNetworking/Serialization (= 2.6.0)
+    - AFNetworking/UIKit (= 2.6.0)
+  - AFNetworking/NSURLConnection (2.6.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.6.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.6.0)
+  - AFNetworking/Security (2.6.0)
+  - AFNetworking/Serialization (2.6.0)
+  - AFNetworking/UIKit (2.6.0):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - Beanstream.SDK (0.0.1):
+    - AFNetworking (= 2.6.0)
+  - MBProgressHUD (0.9.2)
+  - Money (1.4.2):
+    - Result
+    - SwiftyJSON
+    - ValueCoding
+  - ReactiveCocoa (4.0.4-alpha-4):
+    - ReactiveCocoa/UI (= 4.0.4-alpha-4)
+    - Result (~> 1.0)
+  - ReactiveCocoa/Core (4.0.4-alpha-4):
+    - ReactiveCocoa/no-arc
+    - Result (~> 1.0)
+  - ReactiveCocoa/no-arc (4.0.4-alpha-4):
+    - Result (~> 1.0)
+  - ReactiveCocoa/UI (4.0.4-alpha-4):
+    - ReactiveCocoa/Core
+    - Result (~> 1.0)
+  - Result (1.0.1)
+  - SwiftyJSON (2.3.2)
+  - ValueCoding (1.2.0)
+
+DEPENDENCIES:
+  - Beanstream.SDK (from `../beanstreamios.sdk/dist/`)
+  - MBProgressHUD (~> 0.9)
+  - Money (~> 1.4)
+  - ReactiveCocoa (= 4.0.4-alpha-4)
+
+EXTERNAL SOURCES:
+  Beanstream.SDK:
+    :path: ../beanstreamios.sdk/dist/
+
+SPEC CHECKSUMS:
+  AFNetworking: 79f7eb1a0fcfa7beb409332b2ca49afe9ce53b05
+  Beanstream.SDK: e0aaf75acd19515fac118046116a25a5cfc604e9
+  MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
+  Money: 44cf6c0e7e9c0cacf8cfdd5c70ed412e62654fd8
+  ReactiveCocoa: e459ea92099447802df20c4735e31e8139b06094
+  Result: caef80340451e1f07492fa1e89117f83613bce24
+  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+  ValueCoding: e2f7d8fee288debd762b655a8e0ba933985a6b57
+
+COCOAPODS: 0.39.0
