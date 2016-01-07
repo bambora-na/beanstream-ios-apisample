@@ -43,18 +43,18 @@ PODS:
   - ValueCoding (1.2.0)
 
 DEPENDENCIES:
-  - Beanstream.SDK (from `../beanstreamios.sdk/dist/`)
+  - Beanstream.SDK (from `http://localhost/Beanstream.SDK.podspec`)
   - MBProgressHUD (~> 0.9)
   - Money (~> 1.4)
   - ReactiveCocoa (= 4.0.4-alpha-4)
 
 EXTERNAL SOURCES:
   Beanstream.SDK:
-    :path: ../beanstreamios.sdk/dist/
+    :podspec: http://localhost/Beanstream.SDK.podspec
 
 SPEC CHECKSUMS:
   AFNetworking: 79f7eb1a0fcfa7beb409332b2ca49afe9ce53b05
-  Beanstream.SDK: e0aaf75acd19515fac118046116a25a5cfc604e9
+  Beanstream.SDK: 9f9e4fcf580ed2c319260d58bed3a55aca5a31f8
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   Money: 44cf6c0e7e9c0cacf8cfdd5c70ed412e62654fd8
   ReactiveCocoa: e459ea92099447802df20c4735e31e8139b06094
