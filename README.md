@@ -10,7 +10,7 @@ The following projects should be cloned into the same root directory.
 ## 1.) Setup Beanstream API Simulator
 
 ```
-> git clone https://stash.beanstream.com/scm/ios/beanstreamios.sdk.apisimulator.git
+> git clone https://github.com/Beanstream-DRWP/beanstream-ios-apisimulator.git
 ```
 
 Note that the default resulting directory name "beanstreamios.sdk.apisimulator" should be maintained.
@@ -26,7 +26,7 @@ Note that the default resulting directory name "beanstreamios.sdk.apisimulator" 
 ## 2.) Setup Beanstream SDK Demo
 
 ```
-> git clone https://github.com/Beanstream-DRWP/beanstream-ios-sdk-demo.git
+> git clone https://github.com/Beanstream-DRWP/beanstream-ios-apisample.git
 > cd beanstream-ios-sdk-demo
 > pod install
 > open GoldenEggs.xcworkspace
