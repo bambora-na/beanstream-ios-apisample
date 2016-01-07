@@ -10,7 +10,7 @@ The following projects should be cloned into the same root directory.
 ## 1.) Setup Beanstream API Simulator
 
 ```
-> git clone https://stash.beanstream.com/scm/ios/beanstreamios.sdk.apisimulator.git
+> git clone https://github.com/Beanstream-DRWP/beanstream-ios-apisimulator.git
 ```
 
 Note that the default resulting directory name "beanstreamios.sdk.apisimulator" should be maintained.
@@ -26,12 +26,12 @@ Note that the default resulting directory name "beanstreamios.sdk.apisimulator" 
 ## 2.) Setup Beanstream SDK Demo
 
 ```
-> git clone https://github.com/Beanstream-DRWP/beanstream-ios-sdk-demo.git
+> git clone https://github.com/Beanstream-DRWP/beanstream-ios-apisample.git
 > cd beanstream-ios-sdk-demo
 > pod install
 > open GoldenEggs.xcworkspace
 ```
 
-The demo project has simply created a reference to the main APISimulator source directory to be able to import its BICBeanstreamAPISimulator.h in the GoldenEggs-Bridging-Header.h. The BICBeanstreamAPISimulator class extends overrides all needed methods in the BICBeanstreamAPI class (which is what you would use in an actual production mode app).
+The demo project has simply created a reference to the main APISimulator source directory to be able to import its BICBeanstreamAPISimulator.h in the GoldenEggs-Bridging-Header.h. The BICBeanstreamAPISimulator class extends and overrides all needed methods in the BICBeanstreamAPI class (which is what you would use in an actual production mode app).
 
 For more info on how to use the Beanstream SDK check out [developer.beanstream.com](http://developer.beanstream.com).
