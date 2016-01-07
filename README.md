@@ -32,6 +32,6 @@ Note that the default resulting directory name "beanstreamios.sdk.apisimulator" 
 > open GoldenEggs.xcworkspace
 ```
 
-The demo project has simply created a reference to the main APISimulator source directory to be able to import its BICBeanstreamAPISimulator.h in the GoldenEggs-Bridging-Header.h. The BICBeanstreamAPISimulator class extends overrides all needed methods in the BICBeanstreamAPI class (which is what you would use in an actual production mode app).
+The demo project has simply created a reference to the main APISimulator source directory to be able to import its BICBeanstreamAPISimulator.h in the GoldenEggs-Bridging-Header.h. The BICBeanstreamAPISimulator class extends and overrides all needed methods in the BICBeanstreamAPI class (which is what you would use in an actual production mode app).
 
 For more info on how to use the Beanstream SDK check out [developer.beanstream.com](http://developer.beanstream.com).
