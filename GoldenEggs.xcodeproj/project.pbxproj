@@ -34,6 +34,7 @@
 		BCA0D3B51C2B5CC700B520C3 /* UserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA0D3B41C2B5CC700B520C3 /* UserTableViewController.swift */; };
 		BCA0D3B81C2B742600B520C3 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA0D3B71C2B742600B520C3 /* Product.swift */; };
 		BCA0D3BA1C2B765500B520C3 /* LineItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA0D3B91C2B765500B520C3 /* LineItem.swift */; };
+		BCC158A61C3F3ED900D974DE /* APIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC158A51C3F3ED900D974DE /* APIHelper.swift */; };
 		BCC711B01C3B1E6E008F6247 /* UIAlertControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC711AF1C3B1E6E008F6247 /* UIAlertControllerExtensions.swift */; };
 		BCC711B21C3B25A9008F6247 /* LoginHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC711B11C3B25A9008F6247 /* LoginHelper.swift */; };
 		BCEC428A1C3EF82100C09F78 /* BICBeanstreamAPISimulator.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEC42701C3EF82100C09F78 /* BICBeanstreamAPISimulator.m */; };
@@ -100,6 +101,7 @@
 		BCA0D3B41C2B5CC700B520C3 /* UserTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableViewController.swift; sourceTree = "<group>"; };
 		BCA0D3B71C2B742600B520C3 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		BCA0D3B91C2B765500B520C3 /* LineItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineItem.swift; sourceTree = "<group>"; };
+		BCC158A51C3F3ED900D974DE /* APIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIHelper.swift; sourceTree = "<group>"; };
 		BCC711AF1C3B1E6E008F6247 /* UIAlertControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtensions.swift; sourceTree = "<group>"; };
 		BCC711B11C3B25A9008F6247 /* LoginHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginHelper.swift; sourceTree = "<group>"; };
 		BCE7E1C41C3C9C30004604C9 /* iSMP.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iSMP.framework; path = Pods/Beanstream.SDK/Beanstream.SDK/iSMP.framework; sourceTree = "<group>"; };
@@ -265,6 +267,7 @@
 				BC7398661C34711E006201C0 /* SessionExtensions.swift */,
 				BCC711AF1C3B1E6E008F6247 /* UIAlertControllerExtensions.swift */,
 				BCC711B11C3B25A9008F6247 /* LoginHelper.swift */,
+				BCC158A51C3F3ED900D974DE /* APIHelper.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -518,6 +521,7 @@
 				BCA0D3B31C2B5CAD00B520C3 /* TransactionsTableViewController.swift in Sources */,
 				BCEC42931C3EF82100C09F78 /* BICReceiptSimulator.m in Sources */,
 				BCEC428E1C3EF82100C09F78 /* BICAuthenticateSessionSimulator.m in Sources */,
+				BCC158A61C3F3ED900D974DE /* APIHelper.swift in Sources */,
 				BCEC42921C3EF82100C09F78 /* BICProcessTransactionSimulator.m in Sources */,
 				BCC711B21C3B25A9008F6247 /* LoginHelper.swift in Sources */,
 				BCEC428F1C3EF82100C09F78 /* BICCreateSessionSimulator.m in Sources */,

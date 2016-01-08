@@ -118,7 +118,7 @@ class MainViewController: UIViewController {
             }
             request.lineItems = bicLineItems
             
-            let api = BICBeanstreamAPI()
+            let api = APIHelper.api
             NSUserDefaults.standardUserDefaults().setObject("stableweb01", forKey: "bicSubdomainDev")
             
             let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)

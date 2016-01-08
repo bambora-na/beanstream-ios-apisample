@@ -8,6 +8,7 @@
 // Some application data needs to be shared app wide, like the users
 // session, and so it makes sense to use a Singlton for this use case.
 //
+
 class UserData {
     
     static let sharedInstance = UserData()

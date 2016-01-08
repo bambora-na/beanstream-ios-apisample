@@ -63,8 +63,7 @@ class LoginViewController: UIViewController {
         let username = usernameTextField.text
         let password = passwordTextField.text
         
-        //let api = BICBeanstreamAPI()
-        let api = BICBeanstreamAPISimulator()
+        let api = APIHelper.api
         
         NSUserDefaults.standardUserDefaults().setObject("stableweb01", forKey: "bicSubdomainDev")
         
