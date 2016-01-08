@@ -291,7 +291,7 @@
 				BCEC42871C3EF82100C09F78 /* Utils */,
 			);
 			name = APISimulator;
-			path = ../../beanstreamios.sdk.apisimulator/APISimulator;
+			path = "../../beanstream-ios-apisimulator/APISimulator";
 			sourceTree = "<group>";
 		};
 		BCEC42721C3EF82100C09F78 /* Simulators */ = {
