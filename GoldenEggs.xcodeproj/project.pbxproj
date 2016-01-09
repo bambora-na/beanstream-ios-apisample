@@ -75,6 +75,7 @@
 		BC27C2D11C2A247B003D695D /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		BC27C2D51C2A26AB003D695D /* CartTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartTableViewController.swift; sourceTree = "<group>"; };
 		BC27C2DA1C2A27A2003D695D /* GoldenButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoldenButton.swift; sourceTree = "<group>"; };
+		BC291C271C408B44008E1E4D /* BICSimulator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BICSimulator.h; sourceTree = "<group>"; };
 		BC3F41C21C2A0EAD0064DBEB /* GoldenEggs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoldenEggs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC3F41C51C2A0EAD0064DBEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC3F41CC1C2A0EAD0064DBEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -300,6 +301,7 @@
 		BCEC42721C3EF82100C09F78 /* Simulators */ = {
 			isa = PBXGroup;
 			children = (
+				BC291C271C408B44008E1E4D /* BICSimulator.h */,
 				BCEC42731C3EF82100C09F78 /* BICAbandonSessionSimulator.h */,
 				BCEC42741C3EF82100C09F78 /* BICAbandonSessionSimulator.m */,
 				BCEC42751C3EF82100C09F78 /* BICAttachSignatureSimulator.h */,
