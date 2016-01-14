@@ -103,16 +103,16 @@ class MainViewController: UIViewController {
         if let subtotal = cartController?.subtotalAsMoney() {
             let request = BICTransactionRequest()
             request.paymentMethod = bicPaymentMethod
-            request.amount = cartController?.subtotalAsMoney().amount.stringValue
-            request.tax1Price = cartController?.taxAsMoney(subtotal).amount.stringValue
+            request.amount = cartController?.subtotalAsMoney().amount
+            request.tax1Price = cartController?.taxAsMoney(subtotal).amount
             
             let bicLineItems = NSMutableArray()
             for item in lineItems {
                 if let product = item.product {
                     let bicItem = BICLineItem()
                     bicItem.productId = product.sku
-                    bicItem.productCost = product.price.amount.stringValue
-                    bicItem.productQuantity = String(item.quantity)
+                    bicItem.productCost = product.price.amount
+                    bicItem.productQuantity = item.quantity
                     bicLineItems.addObject(bicItem)
                 }
             }

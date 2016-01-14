@@ -15,6 +15,9 @@
 		BC27C2D71C2A26AB003D695D /* CartTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC27C2D51C2A26AB003D695D /* CartTableViewController.swift */; };
 		BC27C2D81C2A26AB003D695D /* CartTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC27C2D51C2A26AB003D695D /* CartTableViewController.swift */; };
 		BC27C2DB1C2A27A2003D695D /* GoldenButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC27C2DA1C2A27A2003D695D /* GoldenButton.swift */; };
+		BC291C341C45AE93008E1E4D /* BICSimulatorMode.m in Sources */ = {isa = PBXBuildFile; fileRef = BC291C331C45AE93008E1E4D /* BICSimulatorMode.m */; };
+		BC291C371C45AEAE008E1E4D /* BICSimulatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BC291C361C45AEAE008E1E4D /* BICSimulatorManager.m */; };
+		BC345C961C4713E9003215A4 /* BICSimulatedCredentialManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BC345C951C4713E9003215A4 /* BICSimulatedCredentialManager.m */; };
 		BC3F41C61C2A0EAD0064DBEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3F41C51C2A0EAD0064DBEB /* AppDelegate.swift */; };
 		BC3F41CD1C2A0EAD0064DBEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC3F41CB1C2A0EAD0064DBEB /* Main.storyboard */; };
 		BC3F41CF1C2A0EAD0064DBEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC3F41CE1C2A0EAD0064DBEB /* Assets.xcassets */; };
@@ -76,6 +79,12 @@
 		BC27C2D51C2A26AB003D695D /* CartTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartTableViewController.swift; sourceTree = "<group>"; };
 		BC27C2DA1C2A27A2003D695D /* GoldenButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoldenButton.swift; sourceTree = "<group>"; };
 		BC291C271C408B44008E1E4D /* BICSimulator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BICSimulator.h; sourceTree = "<group>"; };
+		BC291C321C45AE93008E1E4D /* BICSimulatorMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BICSimulatorMode.h; sourceTree = "<group>"; };
+		BC291C331C45AE93008E1E4D /* BICSimulatorMode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BICSimulatorMode.m; sourceTree = "<group>"; };
+		BC291C351C45AEAE008E1E4D /* BICSimulatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BICSimulatorManager.h; sourceTree = "<group>"; };
+		BC291C361C45AEAE008E1E4D /* BICSimulatorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BICSimulatorManager.m; sourceTree = "<group>"; };
+		BC345C941C4713E9003215A4 /* BICSimulatedCredentialManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BICSimulatedCredentialManager.h; sourceTree = "<group>"; };
+		BC345C951C4713E9003215A4 /* BICSimulatedCredentialManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BICSimulatedCredentialManager.m; sourceTree = "<group>"; };
 		BC3F41C21C2A0EAD0064DBEB /* GoldenEggs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoldenEggs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC3F41C51C2A0EAD0064DBEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC3F41CC1C2A0EAD0064DBEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -288,8 +297,12 @@
 			isa = PBXGroup;
 			children = (
 				BCEC426E1C3EF82100C09F78 /* APISimulator.h */,
+				BC291C351C45AEAE008E1E4D /* BICSimulatorManager.h */,
+				BC291C361C45AEAE008E1E4D /* BICSimulatorManager.m */,
 				BCEC426F1C3EF82100C09F78 /* BICBeanstreamAPISimulator.h */,
 				BCEC42701C3EF82100C09F78 /* BICBeanstreamAPISimulator.m */,
+				BC345C941C4713E9003215A4 /* BICSimulatedCredentialManager.h */,
+				BC345C951C4713E9003215A4 /* BICSimulatedCredentialManager.m */,
 				BCEC42711C3EF82100C09F78 /* Info.plist */,
 				BCEC42721C3EF82100C09F78 /* Simulators */,
 				BCEC42871C3EF82100C09F78 /* Utils */,
@@ -302,6 +315,8 @@
 			isa = PBXGroup;
 			children = (
 				BC291C271C408B44008E1E4D /* BICSimulator.h */,
+				BC291C321C45AE93008E1E4D /* BICSimulatorMode.h */,
+				BC291C331C45AE93008E1E4D /* BICSimulatorMode.m */,
 				BCEC42731C3EF82100C09F78 /* BICAbandonSessionSimulator.h */,
 				BCEC42741C3EF82100C09F78 /* BICAbandonSessionSimulator.m */,
 				BCEC42751C3EF82100C09F78 /* BICAttachSignatureSimulator.h */,
@@ -519,6 +534,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC291C341C45AE93008E1E4D /* BICSimulatorMode.m in Sources */,
 				BCA0D3BA1C2B765500B520C3 /* LineItem.swift in Sources */,
 				BCA0D3B31C2B5CAD00B520C3 /* TransactionsTableViewController.swift in Sources */,
 				BCEC42931C3EF82100C09F78 /* BICReceiptSimulator.m in Sources */,
@@ -533,6 +549,7 @@
 				BC7398631C346582006201C0 /* UserData.swift in Sources */,
 				BCEC428C1C3EF82100C09F78 /* BICAbandonSessionSimulator.m in Sources */,
 				BCA0D3B11C2B51AF00B520C3 /* LoginViewController.swift in Sources */,
+				BC345C961C4713E9003215A4 /* BICSimulatedCredentialManager.m in Sources */,
 				BCC711B01C3B1E6E008F6247 /* UIAlertControllerExtensions.swift in Sources */,
 				BCA0D3A91C2B489100B520C3 /* LineItemTableViewCell.swift in Sources */,
 				BCA0D3AB1C2B489F00B520C3 /* SubtotalTableViewCell.swift in Sources */,
@@ -549,6 +566,7 @@
 				BC3F41C61C2A0EAD0064DBEB /* AppDelegate.swift in Sources */,
 				BCEC428A1C3EF82100C09F78 /* BICBeanstreamAPISimulator.m in Sources */,
 				BCA0D3B51C2B5CC700B520C3 /* UserTableViewController.swift in Sources */,
+				BC291C371C45AEAE008E1E4D /* BICSimulatorManager.m in Sources */,
 				BC27C2D61C2A26AB003D695D /* CartTableViewController.swift in Sources */,
 				BC27C2D21C2A247B003D695D /* MainViewController.swift in Sources */,
 			);

@@ -11,13 +11,13 @@ import Money
 struct LineItem {
     
     var product: Product?
-    var quantity = 0.0
+    var quantity = 0
     var total: Money {
         if let product = product {
             return product.price * quantity;
         }
         else {
-            return 0.0
+            return 0
         }
     }
     
