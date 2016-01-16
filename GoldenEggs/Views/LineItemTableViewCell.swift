@@ -17,7 +17,7 @@ class LineItemTableViewCell: UITableViewCell {
     
     func setLineItem(lineItem: LineItem) {
         productLabel.text = lineItem.product?.name
-        quantityLabel.text = String(format: "%.1f", lineItem.quantity)
+        quantityLabel.text = String(format: "%i", lineItem.quantity)
         
         if let price = lineItem.product?.price {
             unitPriceLabel.text = "\(price)"

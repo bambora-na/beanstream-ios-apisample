@@ -105,6 +105,7 @@ class MainViewController: UIViewController {
             request.paymentMethod = bicPaymentMethod
             request.amount = cartController?.subtotalAsMoney().amount
             request.tax1Price = cartController?.taxAsMoney(subtotal).amount
+            request.transType = "P"
             
             let bicLineItems = NSMutableArray()
             for item in lineItems {
@@ -136,7 +137,12 @@ class MainViewController: UIViewController {
                             self.cartController?.setLineItems(self.lineItems)
                         }
                         else {
-                            UIAlertController.bic_showAlert(self, title: nil, message: "Transaction did not succeed: \(response.responseMessage)")
+                            if let message = response.responseMessage {
+                                UIAlertController.bic_showAlert(self, title: nil, message: "Transaction did not succeed: \(message)")
+                            }
+                            else if let message = response.messageText {
+                                UIAlertController.bic_showAlert(self, title: nil, message: "Transaction did not succeed: \(message)")
+                            }
                         }
                     })
                 },
