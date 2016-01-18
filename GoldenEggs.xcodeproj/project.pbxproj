@@ -24,6 +24,7 @@
 		BC3F41D21C2A0EAD0064DBEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC3F41D01C2A0EAD0064DBEB /* LaunchScreen.storyboard */; };
 		BC3F41DD1C2A0EAD0064DBEB /* GoldenEggsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3F41DC1C2A0EAD0064DBEB /* GoldenEggsTests.swift */; };
 		BC3F41E81C2A0EAD0064DBEB /* GoldenEggsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3F41E71C2A0EAD0064DBEB /* GoldenEggsUITests.swift */; };
+		BC4369961C4D894E001A8265 /* ReceiptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4369951C4D894E001A8265 /* ReceiptViewController.swift */; };
 		BC7398611C34618B006201C0 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7398601C34618B006201C0 /* Session.swift */; };
 		BC7398631C346582006201C0 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7398621C346582006201C0 /* UserData.swift */; };
 		BC7398651C346EC4006201C0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7398641C346EC4006201C0 /* Constants.swift */; };
@@ -97,6 +98,7 @@
 		BC3F41E31C2A0EAD0064DBEB /* GoldenEggsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoldenEggsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC3F41E71C2A0EAD0064DBEB /* GoldenEggsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoldenEggsUITests.swift; sourceTree = "<group>"; };
 		BC3F41E91C2A0EAD0064DBEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC4369951C4D894E001A8265 /* ReceiptViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiptViewController.swift; sourceTree = "<group>"; };
 		BC6503261C2C89B3002A73A7 /* GoldenEggs-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GoldenEggs-Bridging-Header.h"; sourceTree = "<group>"; };
 		BC7398601C34618B006201C0 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		BC7398621C346582006201C0 /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 				BCA0D3B01C2B51AF00B520C3 /* LoginViewController.swift */,
 				BCA0D3B21C2B5CAD00B520C3 /* TransactionsTableViewController.swift */,
 				BCA0D3B41C2B5CC700B520C3 /* UserTableViewController.swift */,
+				BC4369951C4D894E001A8265 /* ReceiptViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -555,6 +558,7 @@
 				BCA0D3AB1C2B489F00B520C3 /* SubtotalTableViewCell.swift in Sources */,
 				BCEC428D1C3EF82100C09F78 /* BICAttachSignatureSimulator.m in Sources */,
 				BCEC42951C3EF82100C09F78 /* BICUpdatePinPadSimulator.m in Sources */,
+				BC4369961C4D894E001A8265 /* ReceiptViewController.swift in Sources */,
 				BC7398611C34618B006201C0 /* Session.swift in Sources */,
 				BC7398671C34711E006201C0 /* SessionExtensions.swift in Sources */,
 				BC7398651C346EC4006201C0 /* Constants.swift in Sources */,

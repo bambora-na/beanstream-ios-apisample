@@ -16,6 +16,8 @@ class TransactionsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = "Tranactions"
         self.tableView.contentInset = UIEdgeInsetsMake(20.0, 0.0, 0.0, 0.0)
         
         NSNotificationCenter.defaultCenter().addObserver(
@@ -57,12 +59,7 @@ class TransactionsTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier("Cell")
-        
-        if cell == nil {
-            cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "Cell")
-        }
-        
+        let cell = tableView.dequeueReusableCellWithIdentifier("TransactionCell")
         let detail = transactionRecords[indexPath.row]
         
         cell!.textLabel?.text = "Txn: \(detail.trnId)"

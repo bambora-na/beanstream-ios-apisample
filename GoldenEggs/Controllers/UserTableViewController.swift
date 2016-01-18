@@ -56,12 +56,7 @@ class UserTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier("Cell")
-        
-        if cell == nil {
-            cell = UITableViewCell(style: UITableViewCellStyle.Value1, reuseIdentifier: "Cell")
-        }
-        
+        let cell = tableView.dequeueReusableCellWithIdentifier("UserCell")
         cell!.textLabel?.text = titles[indexPath.row]
         
         if indexPath.row < values.count {
