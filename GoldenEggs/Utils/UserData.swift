@@ -6,7 +6,7 @@
 //  Copyright © 2015 Beanstream Internet Commerce, Inc. All rights reserved.
 //
 // Some application data needs to be shared app wide, like the users
-// session, and so it makes sense to use a Singlton for this use case.
+// session, and so it makes sense to use a Singleton for this use case.
 //
 
 class UserData {

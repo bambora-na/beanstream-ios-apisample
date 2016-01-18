@@ -87,7 +87,6 @@ class TransactionsTableViewController: UITableViewController {
         request?.reportSortOrder = BICSortOrderBy.TransactionId
         
         let api = APIHelper.api
-        NSUserDefaults.standardUserDefaults().setObject("stableweb01", forKey: "bicSubdomainDev")
         
         let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
         hud.labelText = "Processing...";

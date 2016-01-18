@@ -14,4 +14,6 @@
 #import "BICSearchTransactionsResponse.h"
 #import "BICTransactionDetail.h"
 
+#import "BICAbandonSessionResponse.h"
+
 #import "BICBeanstreamAPISimulator.h"

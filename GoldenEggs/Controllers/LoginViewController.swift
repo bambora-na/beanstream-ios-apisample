@@ -65,8 +65,6 @@ class LoginViewController: UIViewController {
         
         let api = APIHelper.api
         
-        NSUserDefaults.standardUserDefaults().setObject("stableweb01", forKey: "bicSubdomainDev")
-        
         api.createSession(company, username: username, password: password,
             success: { (response) -> Void in
                 self.loginButton.enabled = true

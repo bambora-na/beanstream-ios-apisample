@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MBProgressHUD
 
 class UserTableViewController: UITableViewController {
     
@@ -16,6 +17,7 @@ class UserTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = "Profile"
         self.tableView.contentInset = UIEdgeInsetsMake(20.0, 0.0, 0.0, 0.0)
         self.sessionChanged(nil)
         
@@ -35,6 +37,8 @@ class UserTableViewController: UITableViewController {
             LoginHelper.login(self, completion: nil)
             return
         }
+        
+        checkLogoutButton()
     }
     
     deinit {
@@ -59,7 +63,13 @@ class UserTableViewController: UITableViewController {
         }
         
         cell!.textLabel?.text = titles[indexPath.row]
-        cell!.detailTextLabel?.text = values[indexPath.row]
+        
+        if indexPath.row < values.count {
+            cell!.detailTextLabel?.text = values[indexPath.row]
+        }
+        else {
+            cell!.detailTextLabel?.text = ""
+        }
 
         return cell!
     }
@@ -72,10 +82,50 @@ class UserTableViewController: UITableViewController {
         if let titles = session?.bic_tableRepresentation().titles {
             self.titles = titles
         }
+        
         if let values = session?.bic_tableRepresentation().values {
             self.values = values
         }
+        else {
+            self.values.removeAll()
+        }
         
         self.tableView.reloadData()
+    }
+    
+    internal func logout() {
+        let api = APIHelper.api
+        
+        let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+        hud.labelText = "Processing...";
+        
+        api.abandonSession({ (response) -> Void in
+            // Need to call MBProgressHUD on the main thread
+            dispatch_async(dispatch_get_main_queue(), {
+                hud.hide(true)
+                print("UserTableViewController.logout() code: \(response.code)")
+                UserData.sharedInstance.session = nil
+                self.checkLogoutButton()
+            })
+        }) { (error) -> Void in
+            dispatch_async(dispatch_get_main_queue(), {
+                hud.hide(true)
+                UIAlertController.bic_showAlert(self, title: "Abandon Transaction error", message: "\(error.localizedDescription)")
+                UserData.sharedInstance.session = nil
+                self.checkLogoutButton()
+            })
+        }
+    }
+    
+    // MARK: Private methods
+    
+    func checkLogoutButton() {
+        if let _ = UserData.sharedInstance.session {
+            let logoutButton = UIBarButtonItem(title: "Logout", style: UIBarButtonItemStyle.Plain, target: self, action: "logout")
+            self.navigationItem.setRightBarButtonItem(logoutButton, animated: true)
+        }
+        else {
+            self.navigationItem.setRightBarButtonItem(nil, animated: true)
+        }
     }
 }
