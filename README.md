@@ -1,9 +1,13 @@
 # Beanstream iOS SDK Demo
-This is an iOS demo app to serve as a simple example of using the Beanstream iOS SDK. This app has been written in Swift to allow the example code to be as consice as possible and to demonstrate first class support for Swift.
+The demo apps purpose is to serve as an example of how to use the Beanstream SDK for iOS. Here we have a simple 'e-commerce' style app that facilitates the sale of any number of golden eggs the only available product. A user indicates the number of golden eggs to be purchased at a price of $USD 1.00 and a running total that is converted to the devices locale specific country currency is displayed along with a fictitious sales tax of 5%.
 
-The demo app was setup to use CocoaPoads to automate management of dependencies. These dependencies include ReactiveCocoa, MBProgessHUD, Money and most importantly Beanstream.SDK. An unmanaged dependency called BeanstreamAPISimulator exists that you need to install manually.
+This app has been written in Swift to allow the example code to be as consice as possible and to demonstrate support for Swift. The demo app was setup to use CocoaPoads to automate management of dependencies. These dependencies include ReactiveCocoa, MBProgessHUD, Money and most importantly Beanstream.SDK. An unmanaged dependency called BeanstreamAPISimulator exists that you need to install manually.
 
-To be able to do the following first install [CocoaPods](https://cocoapods.org).
+Note that the Beanstream SDK itself has CocoaPods specified dependencies that include AFNetworking v2.6.0.
+
+To be able to compile this project you can clone the git source repo to a working directory. As dependencies you will also need to clone the Beanstream API Simulator repo and then ensure all other dependencies are installed via CocoaPods.
+
+Requirement: First install [CocoaPods](https://cocoapods.org).
 
 The following projects should be cloned into the same root directory.
 
@@ -27,7 +31,7 @@ Note that the default resulting directory name "beanstreamios.sdk.apisimulator" 
 
 ```
 > git clone https://github.com/Beanstream-DRWP/beanstream-ios-apisample.git
-> cd beanstream-ios-sdk-demo
+> cd beanstream-ios-apisample
 > pod install
 > open GoldenEggs.xcworkspace
 ```
