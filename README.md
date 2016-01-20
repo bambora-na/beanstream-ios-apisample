@@ -2,7 +2,7 @@
 # Beanstream iOS SDK Sample App
 The demo apps purpose is to serve as an example of how to use the Beanstream SDK for iOS. Here we have a simple 'e-commerce' style app that facilitates the sale of any number of golden eggs the only available product. A user indicates the number of golden eggs to be purchased at a price of $USD 1.00 and a running total that is converted to the devices locale specific country currency is displayed along with a fictitious sales tax of 5%.
 
-This app has been written in Swift to allow the example code to be as consice as possible and to demonstrate support for Swift. The demo app was setup to use CocoaPoads to automate management of dependencies. These dependencies include ReactiveCocoa, MBProgessHUD, Money and most importantly Beanstream.SDK. An unmanaged dependency called BeanstreamAPISimulator exists that you need to install manually.
+This app has been written in Swift to allow the example code to be as consice as possible and to demonstrate support for Swift. The demo app was setup to use CocoaPoads to automate management of dependencies. These dependencies include ReactiveCocoa, MBProgessHUD, Money and most importantly Beanstream.SDK. An unmanaged dependency called [Beanstream SDK API Simulator](https://github.com/Beanstream-DRWP/beanstream-ios-apisimulator) exists that you need to install manually.
 
 Note that the Beanstream SDK itself has CocoaPods specified dependencies that include AFNetworking v2.6.0.
 
