@@ -280,6 +280,17 @@
                                     </mask>
                                 </variation>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RQy-gW-gZO">
+                                <rect key="frame" x="414" y="381" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="EmC-Gl-Rjl"/>
+                                    <constraint firstAttribute="width" constant="45" id="h7a-kW-kC3"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="pinpad_disconnected"/>
+                                <connections>
+                                    <action selector="emvConnectButtonAction:" destination="3M2-WP-oGQ" eventType="touchUpInside" id="bJF-3i-Fwa"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -308,7 +319,9 @@
                             <constraint firstItem="CMQ-4t-FvX" firstAttribute="top" secondItem="83m-Fq-VkN" secondAttribute="bottom" constant="8" id="i0S-at-0S4"/>
                             <constraint firstItem="axe-0y-l1K" firstAttribute="leading" secondItem="hRg-tO-lvR" secondAttribute="leading" id="iBW-Bf-GvR"/>
                             <constraint firstAttribute="trailing" secondItem="83m-Fq-VkN" secondAttribute="trailing" constant="30" id="kDv-ar-FSB"/>
+                            <constraint firstItem="RQy-gW-gZO" firstAttribute="centerY" secondItem="pzp-lO-4QF" secondAttribute="centerY" id="m7c-v8-M7F"/>
                             <constraint firstItem="83m-Fq-VkN" firstAttribute="top" secondItem="hRg-tO-lvR" secondAttribute="top" constant="10" id="mni-8h-Z71"/>
+                            <constraint firstItem="RQy-gW-gZO" firstAttribute="leading" secondItem="pzp-lO-4QF" secondAttribute="trailing" constant="24" id="rsH-ov-JmX"/>
                             <constraint firstItem="orh-dD-wk9" firstAttribute="top" secondItem="hRg-tO-lvR" secondAttribute="top" id="vQK-qe-1QO"/>
                             <constraint firstItem="yvZ-9F-ZVp" firstAttribute="top" secondItem="orh-dD-wk9" secondAttribute="bottom" id="xvI-Mj-ztK"/>
                         </constraints>
@@ -341,6 +354,9 @@
                         </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Eggs" image="cloud" id="jc8-qP-KpI"/>
+                    <connections>
+                        <outlet property="emvConnectButton" destination="RQy-gW-gZO" id="r2a-pt-gwy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VUF-Vt-oo6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -896,6 +912,7 @@
         <image name="cloud" width="30" height="30"/>
         <image name="golden-egg" width="109" height="80"/>
         <image name="page" width="30" height="30"/>
+        <image name="pinpad_disconnected" width="45" height="45"/>
         <image name="user" width="30" height="30"/>
         <image name="vine" width="66" height="645"/>
     </resources>

@@ -12,9 +12,26 @@ import MBProgressHUD
 
 class MainViewController: UIViewController {
     
+    @IBOutlet weak var emvConnectButton: UIButton!
+    
     private var cartController: CartTableViewController? = nil
     private var lineItems = [LineItem]()
     private var eggPrice: Money? = nil
+    private var emvConnected = false
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        let api = APIHelper.api
+        emvConnected = api.isPinPadConnected()
+        
+        if emvConnected {
+            emvConnectButton.setImage(UIImage(named: "pinpad_connected"), forState: .Normal)
+        }
+        else {
+            emvConnectButton.setImage(UIImage(named: "pinpad_disconnected"), forState: .Normal)
+        }
+    }
 
     // MARK: - Navigation
 
@@ -90,10 +107,30 @@ class MainViewController: UIViewController {
         }
         actionSheet.addAction(chequeAction)
 
+        let emvAction: UIAlertAction = UIAlertAction(title: "Credit or Debit Card", style: .Default) { action -> Void in
+            self.processTransaction(BIC_EMV_PAYMENT_METHOD)
+        }
+        actionSheet.addAction(emvAction)
+
         let cancelAction: UIAlertAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
         actionSheet.addAction(cancelAction)
 
         self.presentViewController(actionSheet, animated: true, completion: nil)
+    }
+    
+    @IBAction func emvConnectButtonAction(sender: AnyObject) {
+        let api = APIHelper.api
+
+        if !emvConnected {
+            api.connectToPinPad()
+            emvConnectButton.setImage(UIImage(named: "pinpad_connected"), forState: .Normal)
+        }
+        else {
+            api.closePinPadConnection()
+            emvConnectButton.setImage(UIImage(named: "pinpad_disconnected"), forState: .Normal)
+        }
+        
+        emvConnected = !emvConnected
     }
     
     // MARK: - Private methods
