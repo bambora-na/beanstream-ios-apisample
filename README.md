@@ -12,7 +12,7 @@ Requirement: First install [CocoaPods](https://cocoapods.org).
 
 The following projects should be cloned into the same root directory.
 
-## 1.) Setup Beanstream API Simulator
+## 1.) Setup Beanstream SDK API Simulator
 
 ```
 > git clone https://github.com/Beanstream-DRWP/beanstream-ios-apisimulator.git
