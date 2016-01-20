@@ -5,6 +5,10 @@
 //  Created by Sven Resch on 2015-12-23.
 //  Copyright © 2015 Beanstream Internet Commerce, Inc. All rights reserved.
 //
+// This controller displays the current users session related data and for a logged-in
+// user will display a Logout button in the navigation bar. When a user selects Logout,
+// the Beanstream SDK abandonSession API call will be executed.
+//
 
 import UIKit
 import MBProgressHUD

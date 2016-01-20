@@ -10,6 +10,9 @@
 // result in the UserData session being updated and related NSNotifications to
 // be generated.
 //
+// The Beanstream API to createSession is executed when a user selects the Login 
+// button.
+//
 
 import UIKit
 import ReactiveCocoa

@@ -5,6 +5,14 @@
 //  Created by Sven Resch on 2015-12-22.
 //  Copyright © 2015 Beanstream Internet Commerce, Inc. All rights reserved.
 //
+// The main view controller displays a running total of the number of desired Golden Eggs to 
+// be purchased that is converted to a local currency using the Swift Money library. When a 
+// user chooses to "checkout" we then execute a Beanstream API processTransaction request.
+//
+// This controller also takes care of displaying the current EMV Accessory (Pin Pad device) 
+// current connection status and allow the user to simulate connecting and disconnecting the
+// device by exercising any related Beanstream SDK API method calls.
+//
 
 import UIKit
 import Money
@@ -51,7 +59,7 @@ class MainViewController: UIViewController {
             eggPrice = Money(sellPrice.floatValue)
         }
         
-        // if needed ensure that we have a local currency based egg price estimate.
+        // If needed ensure that we have a local currency based egg price estimate.
         guard eggPrice != nil else {
             loadEggPrice(sellPrice)
             return

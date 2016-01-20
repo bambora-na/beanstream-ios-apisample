@@ -5,6 +5,10 @@
 //  Created by Sven Resch on 2015-12-23.
 //  Copyright © 2015 Beanstream Internet Commerce, Inc. All rights reserved.
 //
+// This controller displays any number of transactions using the Beanstream SDK via its
+// searchTransactions API method call. A user can use the table UI and its Pull-to-Refresh
+// mechanism to re-execute the search operation at any time.
+//
 
 import UIKit
 import MBProgressHUD

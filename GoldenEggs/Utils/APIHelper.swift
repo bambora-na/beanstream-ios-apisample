@@ -15,7 +15,7 @@ class APIHelper {
     
     init () {
         dispatch_once(&once) {
-            NSUserDefaults.standardUserDefaults().setObject("stableweb01", forKey: "bicSubdomainDev")
+            //NSUserDefaults.standardUserDefaults().setObject("stableweb01", forKey: "bicSubdomainDev")
         }
     }
     

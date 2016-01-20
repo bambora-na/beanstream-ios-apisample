@@ -5,6 +5,10 @@
 //  Created by Sven Resch on 2016-01-18.
 //  Copyright © 2016 Beanstream Internet Commerce, Inc. All rights reserved.
 //
+// When a user taps on a transaction in the TransactionsTableViewController this controller is
+// loaded. Here we simply execute the Beanstream SDK API to getPrintReceipt and display the 
+// merchants copy in a web view.
+//
 
 import UIKit
 import MBProgressHUD

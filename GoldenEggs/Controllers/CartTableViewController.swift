@@ -5,6 +5,9 @@
 //  Created by Sven Resch on 2015-12-22.
 //  Copyright © 2015 Beanstream Internet Commerce, Inc. All rights reserved.
 //
+// This controller is embedded in the main view controller as a way to easily display
+// and update a running subtotal of any number of line items, a single tax and total.
+//
 
 import UIKit
 import Money
