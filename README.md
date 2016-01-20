@@ -18,7 +18,7 @@ The following projects should be cloned into the same root directory.
 > git clone https://github.com/Beanstream-DRWP/beanstream-ios-apisimulator.git
 ```
 
-Note that the default resulting directory name "beanstreamios.sdk.apisimulator" should be maintained.
+Note that the default resulting directory name "beanstream-ios-apisimulator" should be maintained for a referenced relative directory path to resolve correctly.
 
 ### Optional: Only if you wish to be able to build the simulator
 
