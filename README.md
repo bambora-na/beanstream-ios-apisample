@@ -1,3 +1,4 @@
+<img src="http://www.beanstream.com/wp-content/uploads/2015/08/Beanstream-logo.png" />
 # Beanstream iOS SDK Demo
 The demo apps purpose is to serve as an example of how to use the Beanstream SDK for iOS. Here we have a simple 'e-commerce' style app that facilitates the sale of any number of golden eggs the only available product. A user indicates the number of golden eggs to be purchased at a price of $USD 1.00 and a running total that is converted to the devices locale specific country currency is displayed along with a fictitious sales tax of 5%.
 
