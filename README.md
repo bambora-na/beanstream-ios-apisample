@@ -23,7 +23,7 @@ Note that the default resulting directory name "beanstream-ios-apisimulator" sho
 ### Optional: Only if you wish to be able to build the simulator
 
 ```
-> cd beanstreamios.sdk.apisimulator
+> cd beanstream-ios-apisimulator
 > pod install
 > open APISimulator.xcworkspace
 ```
