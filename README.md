@@ -29,7 +29,7 @@ Note that the default resulting directory name "beanstream-ios-apisimulator" sho
 > open APISimulator.xcworkspace
 ```
 
-## 2.) Setup Beanstream SDK Demo
+## 2.) Setup Beanstream SDK Sample App
 
 ```
 > git clone https://github.com/Beanstream-DRWP/beanstream-ios-apisample.git
