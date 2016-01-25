@@ -25,6 +25,72 @@
 		BC3F41DD1C2A0EAD0064DBEB /* GoldenEggsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3F41DC1C2A0EAD0064DBEB /* GoldenEggsTests.swift */; };
 		BC3F41E81C2A0EAD0064DBEB /* GoldenEggsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3F41E71C2A0EAD0064DBEB /* GoldenEggsUITests.swift */; };
 		BC4369961C4D894E001A8265 /* ReceiptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4369951C4D894E001A8265 /* ReceiptViewController.swift */; };
+		BC4369A11C52BF4C001A8265 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA0D3B01C2B51AF00B520C3 /* LoginViewController.swift */; };
+		BC4369A21C52BF4C001A8265 /* TransactionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA0D3B21C2B5CAD00B520C3 /* TransactionsTableViewController.swift */; };
+		BC4369A31C52BF4C001A8265 /* UserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA0D3B41C2B5CC700B520C3 /* UserTableViewController.swift */; };
+		BC4369A41C52BF4C001A8265 /* ReceiptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4369951C4D894E001A8265 /* ReceiptViewController.swift */; };
+		BC4369A51C52BF4C001A8265 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7398641C346EC4006201C0 /* Constants.swift */; };
+		BC4369A61C52BF4C001A8265 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA0D3B71C2B742600B520C3 /* Product.swift */; };
+		BC4369A71C52BF4C001A8265 /* LineItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA0D3B91C2B765500B520C3 /* LineItem.swift */; };
+		BC4369A81C52BF4C001A8265 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7398601C34618B006201C0 /* Session.swift */; };
+		BC4369A91C52BF4C001A8265 /* GoldenButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC27C2DA1C2A27A2003D695D /* GoldenButton.swift */; };
+		BC4369AA1C52BF4C001A8265 /* LineItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA0D3A81C2B489100B520C3 /* LineItemTableViewCell.swift */; };
+		BC4369AB1C52BF4C001A8265 /* SubtotalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA0D3AA1C2B489F00B520C3 /* SubtotalTableViewCell.swift */; };
+		BC4369AC1C52BF4C001A8265 /* TaxItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA0D3AC1C2B48AF00B520C3 /* TaxItemTableViewCell.swift */; };
+		BC4369AD1C52BF4C001A8265 /* TotalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA0D3AE1C2B48BF00B520C3 /* TotalTableViewCell.swift */; };
+		BC4369AE1C52BF4C001A8265 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7398621C346582006201C0 /* UserData.swift */; };
+		BC4369AF1C52BF4C001A8265 /* SessionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7398661C34711E006201C0 /* SessionExtensions.swift */; };
+		BC4369B01C52BF4C001A8265 /* UIAlertControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC711AF1C3B1E6E008F6247 /* UIAlertControllerExtensions.swift */; };
+		BC4369B11C52BF4C001A8265 /* LoginHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC711B11C3B25A9008F6247 /* LoginHelper.swift */; };
+		BC4369B21C52BF4C001A8265 /* APIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC158A51C3F3ED900D974DE /* APIHelper.swift */; };
+		BC4369B31C52BF4E001A8265 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA0D3B01C2B51AF00B520C3 /* LoginViewController.swift */; };
+		BC4369B41C52BF4E001A8265 /* TransactionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA0D3B21C2B5CAD00B520C3 /* TransactionsTableViewController.swift */; };
+		BC4369B51C52BF4E001A8265 /* UserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA0D3B41C2B5CC700B520C3 /* UserTableViewController.swift */; };
+		BC4369B61C52BF4E001A8265 /* ReceiptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4369951C4D894E001A8265 /* ReceiptViewController.swift */; };
+		BC4369B71C52BF4E001A8265 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7398641C346EC4006201C0 /* Constants.swift */; };
+		BC4369B81C52BF4E001A8265 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA0D3B71C2B742600B520C3 /* Product.swift */; };
+		BC4369B91C52BF4E001A8265 /* LineItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA0D3B91C2B765500B520C3 /* LineItem.swift */; };
+		BC4369BA1C52BF4E001A8265 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7398601C34618B006201C0 /* Session.swift */; };
+		BC4369BB1C52BF4E001A8265 /* GoldenButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC27C2DA1C2A27A2003D695D /* GoldenButton.swift */; };
+		BC4369BC1C52BF4E001A8265 /* LineItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA0D3A81C2B489100B520C3 /* LineItemTableViewCell.swift */; };
+		BC4369BD1C52BF4E001A8265 /* SubtotalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA0D3AA1C2B489F00B520C3 /* SubtotalTableViewCell.swift */; };
+		BC4369BE1C52BF4E001A8265 /* TaxItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA0D3AC1C2B48AF00B520C3 /* TaxItemTableViewCell.swift */; };
+		BC4369BF1C52BF4E001A8265 /* TotalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA0D3AE1C2B48BF00B520C3 /* TotalTableViewCell.swift */; };
+		BC4369C01C52BF4E001A8265 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7398621C346582006201C0 /* UserData.swift */; };
+		BC4369C11C52BF4E001A8265 /* SessionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7398661C34711E006201C0 /* SessionExtensions.swift */; };
+		BC4369C21C52BF4E001A8265 /* UIAlertControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC711AF1C3B1E6E008F6247 /* UIAlertControllerExtensions.swift */; };
+		BC4369C31C52BF4E001A8265 /* LoginHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC711B11C3B25A9008F6247 /* LoginHelper.swift */; };
+		BC4369C41C52BF4E001A8265 /* APIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC158A51C3F3ED900D974DE /* APIHelper.swift */; };
+		BC4369C51C52BF90001A8265 /* BICSimulatorMode.m in Sources */ = {isa = PBXBuildFile; fileRef = BC291C331C45AE93008E1E4D /* BICSimulatorMode.m */; };
+		BC4369C61C52BF90001A8265 /* BICAbandonSessionSimulator.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEC42741C3EF82100C09F78 /* BICAbandonSessionSimulator.m */; };
+		BC4369C71C52BF90001A8265 /* BICAttachSignatureSimulator.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEC42761C3EF82100C09F78 /* BICAttachSignatureSimulator.m */; };
+		BC4369C81C52BF90001A8265 /* BICAuthenticateSessionSimulator.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEC42781C3EF82100C09F78 /* BICAuthenticateSessionSimulator.m */; };
+		BC4369C91C52BF90001A8265 /* BICCreateSessionSimulator.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEC427A1C3EF82100C09F78 /* BICCreateSessionSimulator.m */; };
+		BC4369CA1C52BF90001A8265 /* BICInitializePinPadSimulator.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEC427C1C3EF82100C09F78 /* BICInitializePinPadSimulator.m */; };
+		BC4369CB1C52BF90001A8265 /* BICPinPadConnectionSimulator.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEC427E1C3EF82100C09F78 /* BICPinPadConnectionSimulator.m */; };
+		BC4369CC1C52BF90001A8265 /* BICProcessTransactionSimulator.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEC42801C3EF82100C09F78 /* BICProcessTransactionSimulator.m */; };
+		BC4369CD1C52BF90001A8265 /* BICReceiptSimulator.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEC42821C3EF82100C09F78 /* BICReceiptSimulator.m */; };
+		BC4369CE1C52BF90001A8265 /* BICSearchTransactionsSimulator.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEC42841C3EF82100C09F78 /* BICSearchTransactionsSimulator.m */; };
+		BC4369CF1C52BF90001A8265 /* BICUpdatePinPadSimulator.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEC42861C3EF82100C09F78 /* BICUpdatePinPadSimulator.m */; };
+		BC4369D01C52BF90001A8265 /* BICSimulatorState.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEC42891C3EF82100C09F78 /* BICSimulatorState.m */; };
+		BC4369D11C52BF91001A8265 /* BICSimulatorMode.m in Sources */ = {isa = PBXBuildFile; fileRef = BC291C331C45AE93008E1E4D /* BICSimulatorMode.m */; };
+		BC4369D21C52BF91001A8265 /* BICAbandonSessionSimulator.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEC42741C3EF82100C09F78 /* BICAbandonSessionSimulator.m */; };
+		BC4369D31C52BF91001A8265 /* BICAttachSignatureSimulator.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEC42761C3EF82100C09F78 /* BICAttachSignatureSimulator.m */; };
+		BC4369D41C52BF91001A8265 /* BICAuthenticateSessionSimulator.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEC42781C3EF82100C09F78 /* BICAuthenticateSessionSimulator.m */; };
+		BC4369D51C52BF91001A8265 /* BICCreateSessionSimulator.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEC427A1C3EF82100C09F78 /* BICCreateSessionSimulator.m */; };
+		BC4369D61C52BF91001A8265 /* BICInitializePinPadSimulator.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEC427C1C3EF82100C09F78 /* BICInitializePinPadSimulator.m */; };
+		BC4369D71C52BF91001A8265 /* BICPinPadConnectionSimulator.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEC427E1C3EF82100C09F78 /* BICPinPadConnectionSimulator.m */; };
+		BC4369D81C52BF91001A8265 /* BICProcessTransactionSimulator.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEC42801C3EF82100C09F78 /* BICProcessTransactionSimulator.m */; };
+		BC4369D91C52BF91001A8265 /* BICReceiptSimulator.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEC42821C3EF82100C09F78 /* BICReceiptSimulator.m */; };
+		BC4369DA1C52BF91001A8265 /* BICSearchTransactionsSimulator.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEC42841C3EF82100C09F78 /* BICSearchTransactionsSimulator.m */; };
+		BC4369DB1C52BF91001A8265 /* BICUpdatePinPadSimulator.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEC42861C3EF82100C09F78 /* BICUpdatePinPadSimulator.m */; };
+		BC4369DC1C52BF91001A8265 /* BICSimulatorState.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEC42891C3EF82100C09F78 /* BICSimulatorState.m */; };
+		BC4369DD1C52BF9A001A8265 /* BICSimulatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BC291C361C45AEAE008E1E4D /* BICSimulatorManager.m */; };
+		BC4369DE1C52BF9A001A8265 /* BICBeanstreamAPISimulator.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEC42701C3EF82100C09F78 /* BICBeanstreamAPISimulator.m */; };
+		BC4369DF1C52BF9A001A8265 /* BICSimulatedCredentialManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BC345C951C4713E9003215A4 /* BICSimulatedCredentialManager.m */; };
+		BC4369E01C52BF9B001A8265 /* BICSimulatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BC291C361C45AEAE008E1E4D /* BICSimulatorManager.m */; };
+		BC4369E11C52BF9B001A8265 /* BICBeanstreamAPISimulator.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEC42701C3EF82100C09F78 /* BICBeanstreamAPISimulator.m */; };
+		BC4369E21C52BF9B001A8265 /* BICSimulatedCredentialManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BC345C951C4713E9003215A4 /* BICSimulatedCredentialManager.m */; };
 		BC7398611C34618B006201C0 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7398601C34618B006201C0 /* Session.swift */; };
 		BC7398631C346582006201C0 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7398621C346582006201C0 /* UserData.swift */; };
 		BC7398651C346EC4006201C0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7398641C346EC4006201C0 /* Constants.swift */; };
@@ -580,9 +646,42 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC4369C51C52BF90001A8265 /* BICSimulatorMode.m in Sources */,
+				BC4369B21C52BF4C001A8265 /* APIHelper.swift in Sources */,
+				BC4369CF1C52BF90001A8265 /* BICUpdatePinPadSimulator.m in Sources */,
+				BC4369CA1C52BF90001A8265 /* BICInitializePinPadSimulator.m in Sources */,
+				BC4369A21C52BF4C001A8265 /* TransactionsTableViewController.swift in Sources */,
+				BC4369A11C52BF4C001A8265 /* LoginViewController.swift in Sources */,
+				BC4369DE1C52BF9A001A8265 /* BICBeanstreamAPISimulator.m in Sources */,
+				BC4369A61C52BF4C001A8265 /* Product.swift in Sources */,
 				BC3F41DD1C2A0EAD0064DBEB /* GoldenEggsTests.swift in Sources */,
+				BC4369AC1C52BF4C001A8265 /* TaxItemTableViewCell.swift in Sources */,
 				BC27C2D71C2A26AB003D695D /* CartTableViewController.swift in Sources */,
+				BC4369A41C52BF4C001A8265 /* ReceiptViewController.swift in Sources */,
+				BC4369AA1C52BF4C001A8265 /* LineItemTableViewCell.swift in Sources */,
+				BC4369C91C52BF90001A8265 /* BICCreateSessionSimulator.m in Sources */,
+				BC4369A91C52BF4C001A8265 /* GoldenButton.swift in Sources */,
+				BC4369B11C52BF4C001A8265 /* LoginHelper.swift in Sources */,
+				BC4369A71C52BF4C001A8265 /* LineItem.swift in Sources */,
+				BC4369C71C52BF90001A8265 /* BICAttachSignatureSimulator.m in Sources */,
+				BC4369CD1C52BF90001A8265 /* BICReceiptSimulator.m in Sources */,
+				BC4369AD1C52BF4C001A8265 /* TotalTableViewCell.swift in Sources */,
+				BC4369A81C52BF4C001A8265 /* Session.swift in Sources */,
+				BC4369A31C52BF4C001A8265 /* UserTableViewController.swift in Sources */,
+				BC4369C61C52BF90001A8265 /* BICAbandonSessionSimulator.m in Sources */,
+				BC4369AE1C52BF4C001A8265 /* UserData.swift in Sources */,
+				BC4369D01C52BF90001A8265 /* BICSimulatorState.m in Sources */,
+				BC4369CE1C52BF90001A8265 /* BICSearchTransactionsSimulator.m in Sources */,
+				BC4369AF1C52BF4C001A8265 /* SessionExtensions.swift in Sources */,
+				BC4369C81C52BF90001A8265 /* BICAuthenticateSessionSimulator.m in Sources */,
+				BC4369CB1C52BF90001A8265 /* BICPinPadConnectionSimulator.m in Sources */,
+				BC4369CC1C52BF90001A8265 /* BICProcessTransactionSimulator.m in Sources */,
 				BC27C2D31C2A247B003D695D /* MainViewController.swift in Sources */,
+				BC4369B01C52BF4C001A8265 /* UIAlertControllerExtensions.swift in Sources */,
+				BC4369DD1C52BF9A001A8265 /* BICSimulatorManager.m in Sources */,
+				BC4369A51C52BF4C001A8265 /* Constants.swift in Sources */,
+				BC4369DF1C52BF9A001A8265 /* BICSimulatedCredentialManager.m in Sources */,
+				BC4369AB1C52BF4C001A8265 /* SubtotalTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -590,9 +689,42 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC4369D11C52BF91001A8265 /* BICSimulatorMode.m in Sources */,
+				BC4369C41C52BF4E001A8265 /* APIHelper.swift in Sources */,
+				BC4369DB1C52BF91001A8265 /* BICUpdatePinPadSimulator.m in Sources */,
+				BC4369D61C52BF91001A8265 /* BICInitializePinPadSimulator.m in Sources */,
+				BC4369B41C52BF4E001A8265 /* TransactionsTableViewController.swift in Sources */,
+				BC4369B31C52BF4E001A8265 /* LoginViewController.swift in Sources */,
+				BC4369E11C52BF9B001A8265 /* BICBeanstreamAPISimulator.m in Sources */,
+				BC4369B81C52BF4E001A8265 /* Product.swift in Sources */,
 				BC3F41E81C2A0EAD0064DBEB /* GoldenEggsUITests.swift in Sources */,
+				BC4369BE1C52BF4E001A8265 /* TaxItemTableViewCell.swift in Sources */,
 				BC27C2D81C2A26AB003D695D /* CartTableViewController.swift in Sources */,
+				BC4369B61C52BF4E001A8265 /* ReceiptViewController.swift in Sources */,
+				BC4369BC1C52BF4E001A8265 /* LineItemTableViewCell.swift in Sources */,
+				BC4369D51C52BF91001A8265 /* BICCreateSessionSimulator.m in Sources */,
+				BC4369BB1C52BF4E001A8265 /* GoldenButton.swift in Sources */,
+				BC4369C31C52BF4E001A8265 /* LoginHelper.swift in Sources */,
+				BC4369B91C52BF4E001A8265 /* LineItem.swift in Sources */,
+				BC4369D31C52BF91001A8265 /* BICAttachSignatureSimulator.m in Sources */,
+				BC4369D91C52BF91001A8265 /* BICReceiptSimulator.m in Sources */,
+				BC4369BF1C52BF4E001A8265 /* TotalTableViewCell.swift in Sources */,
+				BC4369BA1C52BF4E001A8265 /* Session.swift in Sources */,
+				BC4369B51C52BF4E001A8265 /* UserTableViewController.swift in Sources */,
+				BC4369D21C52BF91001A8265 /* BICAbandonSessionSimulator.m in Sources */,
+				BC4369C01C52BF4E001A8265 /* UserData.swift in Sources */,
+				BC4369DC1C52BF91001A8265 /* BICSimulatorState.m in Sources */,
+				BC4369DA1C52BF91001A8265 /* BICSearchTransactionsSimulator.m in Sources */,
+				BC4369C11C52BF4E001A8265 /* SessionExtensions.swift in Sources */,
+				BC4369D41C52BF91001A8265 /* BICAuthenticateSessionSimulator.m in Sources */,
+				BC4369D71C52BF91001A8265 /* BICPinPadConnectionSimulator.m in Sources */,
+				BC4369D81C52BF91001A8265 /* BICProcessTransactionSimulator.m in Sources */,
 				BC27C2D41C2A247B003D695D /* MainViewController.swift in Sources */,
+				BC4369C21C52BF4E001A8265 /* UIAlertControllerExtensions.swift in Sources */,
+				BC4369E01C52BF9B001A8265 /* BICSimulatorManager.m in Sources */,
+				BC4369B71C52BF4E001A8265 /* Constants.swift in Sources */,
+				BC4369E21C52BF9B001A8265 /* BICSimulatedCredentialManager.m in Sources */,
+				BC4369BD1C52BF4E001A8265 /* SubtotalTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -722,8 +854,9 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				ENABLE_BITCODE = YES;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = GoldenEggs/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.beanstream.GoldenEggs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -741,8 +874,9 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				ENABLE_BITCODE = YES;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = GoldenEggs/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.beanstream.GoldenEggs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
