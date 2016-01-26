@@ -95,6 +95,9 @@
 		BC7398631C346582006201C0 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7398621C346582006201C0 /* UserData.swift */; };
 		BC7398651C346EC4006201C0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7398641C346EC4006201C0 /* Constants.swift */; };
 		BC7398671C34711E006201C0 /* SessionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7398661C34711E006201C0 /* SessionExtensions.swift */; };
+		BC8F70811C57F2E500A08C56 /* BICAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8F70801C57F2E500A08C56 /* BICAlertController.m */; };
+		BC8F70821C57F2EB00A08C56 /* BICAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8F70801C57F2E500A08C56 /* BICAlertController.m */; };
+		BC8F70831C57F2EC00A08C56 /* BICAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8F70801C57F2E500A08C56 /* BICAlertController.m */; };
 		BCA0D3A91C2B489100B520C3 /* LineItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA0D3A81C2B489100B520C3 /* LineItemTableViewCell.swift */; };
 		BCA0D3AB1C2B489F00B520C3 /* SubtotalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA0D3AA1C2B489F00B520C3 /* SubtotalTableViewCell.swift */; };
 		BCA0D3AD1C2B48AF00B520C3 /* TaxItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA0D3AC1C2B48AF00B520C3 /* TaxItemTableViewCell.swift */; };
@@ -170,6 +173,8 @@
 		BC7398621C346582006201C0 /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		BC7398641C346EC4006201C0 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = ../Utils/Constants.swift; sourceTree = "<group>"; };
 		BC7398661C34711E006201C0 /* SessionExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionExtensions.swift; sourceTree = "<group>"; };
+		BC8F707F1C57F2E500A08C56 /* BICAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BICAlertController.h; sourceTree = "<group>"; };
+		BC8F70801C57F2E500A08C56 /* BICAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BICAlertController.m; sourceTree = "<group>"; };
 		BCA0D3A81C2B489100B520C3 /* LineItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineItemTableViewCell.swift; sourceTree = "<group>"; };
 		BCA0D3AA1C2B489F00B520C3 /* SubtotalTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubtotalTableViewCell.swift; sourceTree = "<group>"; };
 		BCA0D3AC1C2B48AF00B520C3 /* TaxItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxItemTableViewCell.swift; sourceTree = "<group>"; };
@@ -415,6 +420,8 @@
 			children = (
 				BCEC42881C3EF82100C09F78 /* BICSimulatorState.h */,
 				BCEC42891C3EF82100C09F78 /* BICSimulatorState.m */,
+				BC8F707F1C57F2E500A08C56 /* BICAlertController.h */,
+				BC8F70801C57F2E500A08C56 /* BICAlertController.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -628,6 +635,7 @@
 				BC7398611C34618B006201C0 /* Session.swift in Sources */,
 				BC7398671C34711E006201C0 /* SessionExtensions.swift in Sources */,
 				BC7398651C346EC4006201C0 /* Constants.swift in Sources */,
+				BC8F70811C57F2E500A08C56 /* BICAlertController.m in Sources */,
 				BCA0D3AF1C2B48BF00B520C3 /* TotalTableViewCell.swift in Sources */,
 				BCA0D3B81C2B742600B520C3 /* Product.swift in Sources */,
 				BCA0D3AD1C2B48AF00B520C3 /* TaxItemTableViewCell.swift in Sources */,
@@ -671,6 +679,7 @@
 				BC4369C61C52BF90001A8265 /* BICAbandonSessionSimulator.m in Sources */,
 				BC4369AE1C52BF4C001A8265 /* UserData.swift in Sources */,
 				BC4369D01C52BF90001A8265 /* BICSimulatorState.m in Sources */,
+				BC8F70821C57F2EB00A08C56 /* BICAlertController.m in Sources */,
 				BC4369CE1C52BF90001A8265 /* BICSearchTransactionsSimulator.m in Sources */,
 				BC4369AF1C52BF4C001A8265 /* SessionExtensions.swift in Sources */,
 				BC4369C81C52BF90001A8265 /* BICAuthenticateSessionSimulator.m in Sources */,
@@ -714,6 +723,7 @@
 				BC4369D21C52BF91001A8265 /* BICAbandonSessionSimulator.m in Sources */,
 				BC4369C01C52BF4E001A8265 /* UserData.swift in Sources */,
 				BC4369DC1C52BF91001A8265 /* BICSimulatorState.m in Sources */,
+				BC8F70831C57F2EC00A08C56 /* BICAlertController.m in Sources */,
 				BC4369DA1C52BF91001A8265 /* BICSearchTransactionsSimulator.m in Sources */,
 				BC4369C11C52BF4E001A8265 /* SessionExtensions.swift in Sources */,
 				BC4369D41C52BF91001A8265 /* BICAuthenticateSessionSimulator.m in Sources */,
