@@ -1,9 +1,11 @@
 <img src="http://www.beanstream.com/wp-content/uploads/2015/08/Beanstream-logo.png" />
 # Beanstream iOS SDK Sample App
-<img align="right" src="screenshot.png" width=200px /> 
-The demo apps purpose is to serve as an example of how to use the Beanstream SDK for iOS. Here we have a simple 'e-commerce' style app that facilitates the sale of any number of golden eggs the only available product. A user indicates the number of golden eggs to be purchased at a price of $USD 1.00 and a running total that is converted to the devices locale specific country currency is displayed along with a fictitious sales tax of 5%.
-
-This app has been written in Swift to allow the example code to be as consice as possible and to demonstrate support for Swift. The demo app was setup to use CocoaPoads to automate management of dependencies. These dependencies include ReactiveCocoa, MBProgessHUD, Money and most importantly Beanstream.SDK. An unmanaged dependency called [Beanstream SDK API Simulator](https://github.com/Beanstream-DRWP/beanstream-ios-apisimulator) exists that you need to install manually.
+<img align="right" src="screenshot.png" width=200px />
+The purpose of this sample app is to show how to use the Beanstream SDK for iOS.
+ 
+This image shows a simple e-commerce type app that only sells golden eggs. The user selects the number of golden eggs to purchase, at a price of $1 each. The running total converts to the country currency of the device’s location. A fictitious sales tax of 5% is also added.
+ 
+This app was written in Swift, to allow the example code to be as concise as possible, and to demonstrate support for Swift. The demo app was setup to use CocoaPoads to automate the management of dependencies. These dependencies include ReactiveCocoa, MBProgessHUD, Money, and most importantly Beanstream.SDK. You also need to manually install an unmanaged dependency called [Beanstream SDK API Simulator](https://github.com/Beanstream-DRWP/beanstream-ios-apisimulator).
 
 Note that the Beanstream SDK itself has CocoaPods specified dependencies that include AFNetworking v2.6.0.
 
@@ -38,6 +40,6 @@ Note that the default resulting directory name "beanstream-ios-apisimulator" sho
 > open GoldenEggs.xcworkspace
 ```
 
-The demo project has simply created a reference to the main APISimulator source directory to be able to import its BICBeanstreamAPISimulator.h in the GoldenEggs-Bridging-Header.h. The BICBeanstreamAPISimulator class extends and overrides all needed methods in the BICBeanstreamAPI class (which is what you would use in an actual production mode app).
+This demo project has simply created a reference to the main APISimulator source directory to be able to import its BICBeanstreamAPISimulator.h into the GoldenEggs-Bridging-Header.h. The BICBeanstreamAPISimulator class extends and overrides all needed methods in the BICBeanstreamAPI class (which is what you would use in an actual production mode app).
 
 For more info on how to use the Beanstream SDK check out [developer.beanstream.com](http://developer.beanstream.com).
