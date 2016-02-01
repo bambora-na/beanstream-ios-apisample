@@ -51,6 +51,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         tabBarController.selectedIndex = 1
         tabBarController.selectedIndex = 0
         
+        //APIHelper.api.rootViewController = tabBarController
+        
         return true
     }
 
