@@ -20,12 +20,10 @@ PODS:
   - AFNetworking/UIKit (2.6.0):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
-  - Beanstream.SDK (2.0.0):
+  - Beanstream.SDK (2.0.0-alpha.6):
     - AFNetworking (= 2.6.0)
   - MBProgressHUD (0.9.2)
-  - Money (1.4.2):
-    - Result
-    - SwiftyJSON
+  - Money (1.6.0):
     - ValueCoding
   - ReactiveCocoa (4.0.4-alpha-4):
     - ReactiveCocoa/UI (= 4.0.4-alpha-4)
@@ -38,24 +36,22 @@ PODS:
   - ReactiveCocoa/UI (4.0.4-alpha-4):
     - ReactiveCocoa/Core
     - Result (~> 1.0)
-  - Result (1.0.1)
-  - SwiftyJSON (2.3.2)
+  - Result (1.0.2)
   - ValueCoding (1.2.0)
 
 DEPENDENCIES:
-  - Beanstream.SDK
+  - Beanstream.SDK (~> 2.0.0-alpha.0)
   - MBProgressHUD (~> 0.9)
   - Money (~> 1.4)
   - ReactiveCocoa (= 4.0.4-alpha-4)
 
 SPEC CHECKSUMS:
   AFNetworking: 79f7eb1a0fcfa7beb409332b2ca49afe9ce53b05
-  Beanstream.SDK: 126cb8d19696fd428a394815488356ee7c43ecba
+  Beanstream.SDK: 0e280d29c8fa1e8a54d24b83158ad5676cfcabd1
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
-  Money: 44cf6c0e7e9c0cacf8cfdd5c70ed412e62654fd8
+  Money: aa741db5fe9c7a77f870e4a59938fe8342067734
   ReactiveCocoa: e459ea92099447802df20c4735e31e8139b06094
-  Result: caef80340451e1f07492fa1e89117f83613bce24
-  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+  Result: dd3dd71af3fa2e262f1a999e14fba2c25ec14f16
   ValueCoding: e2f7d8fee288debd762b655a8e0ba933985a6b57
 
 COCOAPODS: 0.39.0
