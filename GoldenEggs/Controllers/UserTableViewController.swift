@@ -98,22 +98,23 @@ class UserTableViewController: UITableViewController {
         let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
         hud.labelText = "Processing...";
         
-        api.abandonSession({ (response) -> Void in
+        api.abandonSession({ (response, error) -> Void in
             // Need to call MBProgressHUD on the main thread
             dispatch_async(dispatch_get_main_queue(), {
                 hud.hide(true)
-                print("UserTableViewController.logout() code: \(response.code)")
-                UserData.sharedInstance.session = nil
+                
+                if let error = error {
+                    UIAlertController.bic_showAlert(self, title: "Abandon Transaction error", message: "\(error.localizedDescription)")
+                    UserData.sharedInstance.session = nil
+                }
+                else if let response = response {
+                    print("UserTableViewController.logout() code: \(response.code)")
+                    UserData.sharedInstance.session = nil
+                }
+                
                 self.checkLogoutButton()
             })
-        }) { (error) -> Void in
-            dispatch_async(dispatch_get_main_queue(), {
-                hud.hide(true)
-                UIAlertController.bic_showAlert(self, title: "Abandon Transaction error", message: "\(error.localizedDescription)")
-                UserData.sharedInstance.session = nil
-                self.checkLogoutButton()
-            })
-        }
+        })
     }
     
     // MARK: Private methods

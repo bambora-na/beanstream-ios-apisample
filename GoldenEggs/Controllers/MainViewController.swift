@@ -24,11 +24,16 @@ class MainViewController: UIViewController {
     
     private var cartController: CartTableViewController? = nil
     private var lineItems = [LineItem]()
-    private var eggPrice: Money? = nil
+    private var eggPrice: Money?
     private var emvConnected = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let sellPrice: CAD = 1.00
+        
+        // In a real app could do a foreign exchange check and conversion here.
+        eggPrice = Money(sellPrice.floatValue)
 
         let api = APIHelper.api
         emvConnected = api.isPinPadConnected()
@@ -52,19 +57,6 @@ class MainViewController: UIViewController {
     // MARK: - Custom action methods
 
     @IBAction func addButtonAction(sender: AnyObject?) {
-        let sellPrice: USD = 1.00
-        
-        // Check to see if we need to do an exchange estimate.
-        if eggPrice == nil && sellPrice.currencyCode == Money().currencyCode {
-            eggPrice = Money(sellPrice.floatValue)
-        }
-        
-        // If needed ensure that we have a local currency based egg price estimate.
-        guard eggPrice != nil else {
-            loadEggPrice(sellPrice)
-            return
-        }
-        
         var lineItem: LineItem
         
         if lineItems.count == 0 {
@@ -170,32 +162,32 @@ class MainViewController: UIViewController {
             hud.labelText = "Processing...";
             
             api.processTransaction(request,
-                success: { (response) -> Void in
+                completion: { (response, error) -> Void in
                     // Need to call MBProgressHUD on the main thread
                     dispatch_async(dispatch_get_main_queue(), {
                         hud.hide(true)
                         
-                        if response.trnApproved {
-                            UIAlertController.bic_showAlert(self, title: nil, message: "Transaction completed!")
-                            self.lineItems.removeAll()
-                            self.cartController?.setLineItems(self.lineItems)
+                        if let error = error {
+                            UIAlertController.bic_showAlert(self, title: "Process Transaction error", message: "\(error.localizedDescription)")
                         }
-                        else {
-                            if let message = response.responseMessage {
-                                UIAlertController.bic_showAlert(self, title: nil, message: "Transaction did not succeed: \(message)")
+                        else if let response = response {
+                            if response.trnApproved {
+                                UIAlertController.bic_showAlert(self, title: nil, message: "Transaction completed!")
+                                self.lineItems.removeAll()
+                                self.cartController?.setLineItems(self.lineItems)
                             }
-                            else if let message = response.messageText {
-                                UIAlertController.bic_showAlert(self, title: nil, message: "Transaction did not succeed: \(message)")
+                            else {
+                                if let message = response.responseMessage {
+                                    UIAlertController.bic_showAlert(self, title: nil, message: "Transaction did not succeed: \(message)")
+                                }
+                                else if let message = response.messageText {
+                                    UIAlertController.bic_showAlert(self, title: nil, message: "Transaction did not succeed: \(message)")
+                                }
                             }
                         }
                     })
-                },
-                failure: { (error) -> Void in
-                    dispatch_async(dispatch_get_main_queue(), {
-                        hud.hide(true)
-                        UIAlertController.bic_showAlert(self, title: "Process Transaction error", message: "\(error.localizedDescription)")
-                    })
-            })
+                }
+            )
         }
     }
     
@@ -210,49 +202,6 @@ class MainViewController: UIViewController {
         lineItem.product = product
         
         return lineItem
-    }
-    
-    private func loadEggPrice<Base where
-        Base: MoneyType,
-        Base.Coder: NSCoding,
-        Base.Coder.ValueType == Base,
-        Base.DecimalStorageType == BankersDecimal.DecimalStorageType>(sellPrice: Base)
-    {
-        let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
-        hud.labelText = "Loading Exchange Rate";
-        
-        // Getting exchange can happen super quick and the UX in that
-        // case is a little odd. Introduce a slightly forced delay so
-        // that user can see that something is happening.
-        let time = dispatch_time(dispatch_time_t(DISPATCH_TIME_NOW), 1 * Int64(NSEC_PER_SEC))
-        dispatch_after(time, dispatch_get_main_queue()) {
-            // Ensure that we convert the sell price for an Egg to
-            // the device/system.user local price using the Yahoo foreign
-            // exchange service.
-            Yahoo<Base, Money>.quote(sellPrice) { result in
-                // Need to call MBProgressHUD on the main thread
-                dispatch_async(dispatch_get_main_queue(), {
-                    hud.hide(true)
-                    
-                    if let tx = result.value {
-                        print("Exchanged \(tx.base) into \(tx.counter) with a rate of \(tx.rate) and \(tx.commission) commission.")
-                        print("Counter Currency code: \(tx.counter.currencyCode)")
-                        self.eggPrice = tx.counter
-                        
-                        // Re-execute the addButton action
-                        self.addButtonAction(nil)
-                    }
-                    else {
-                        if let error = result.error {
-                            print("Exchange error: \(error)")
-                        }
-                        else {
-                            print("Unknown Exchange Error!!!")
-                        }
-                    }
-                })
-            }
-        }
     }
     
 }
