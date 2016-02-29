@@ -64,26 +64,24 @@ class ReceiptViewController: UIViewController {
         
         api.getPrintReceipt("12345677",
             language: "en",
-            success: { (response) -> Void in
-                // Need to call MBProgressHUD on the main thread
+            completion: { (response, error) -> Void in
                 dispatch_async(dispatch_get_main_queue(), {
                     hud.hide(true)
-                    print("ReceiptViewController.requestReceipt() code: \(response.code)")
-                    if response.code == 1 {
-                        self.htmlString = response.receiptMerchantCopy
+                    if let error = error {
+                        UIAlertController.bic_showAlert(self, title: "Get Receipt Error", message: "\(error.localizedDescription)")
                     }
-                    else {
-                        UIAlertController.bic_showAlert(self, title: "Get Receipt Issue", message: "\(response.message)")
+                    else if let response = response {
+                        print("ReceiptViewController.requestReceipt() code: \(response.code)")
+                        if response.code == 1 {
+                            self.htmlString = response.receiptMerchantCopy
+                        }
+                        else {
+                            UIAlertController.bic_showAlert(self, title: "Get Receipt Issue", message: "\(response.message)")
+                        }
+                        self.loadHTML()
                     }
-                    self.loadHTML()
                 })
-                
-            }) { (error) -> Void in
-                dispatch_async(dispatch_get_main_queue(), {
-                    hud.hide(true)
-                    UIAlertController.bic_showAlert(self, title: "Get Receipt Error", message: "\(error.localizedDescription)")
-                })
-        }
+        })
     }
 
     private func loadHTML() {

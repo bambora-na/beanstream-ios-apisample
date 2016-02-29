@@ -62,37 +62,38 @@ class LoginViewController: UIViewController {
         self.loginButton.enabled = false
         activityIndicatorView.startAnimating()
         
-        let company = companyTextField.text
-        let username = usernameTextField.text
-        let password = passwordTextField.text
+        let company: String = companyTextField.text!
+        let username: String = usernameTextField.text!
+        let password: String = passwordTextField.text!
         
         let api = APIHelper.api
         
         api.createSession(company, username: username, password: password,
-            success: { (response) -> Void in
+            completion: { (response, error) -> Void in
                 self.loginButton.enabled = true
                 self.activityIndicatorView.stopAnimating()
-                if ( response.errorCode != "0" || !response.isAuthorized ) {
-                    let session = Session(response: response)
-                    UserData.sharedInstance.session = session
-                    self.presentingViewController?.dismissViewControllerAnimated(true, completion: { () -> Void in
-                        self.loginCompletionHandler?()
-                    })
-                }
-                else {
-                    let alert = UIAlertController(title: "Bad response", message: "Code: \(response.errorCode) Message:\(response.responseMessage)", preferredStyle: .Alert)
+
+                if let error = error {
+                    let alert = UIAlertController(title: "Error", message: "Code: \(error.code) Message:\(error.localizedDescription)", preferredStyle: .Alert)
                     let okAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
                     alert.addAction(okAction)
                     self.presentViewController(alert, animated: true, completion: nil)
                 }
-            },
-            failure: { (error) -> Void in
-                self.loginButton.enabled = true
-                self.activityIndicatorView.stopAnimating()
-                let alert = UIAlertController(title: "Error", message: "Code: \(error.code) Message:\(error.localizedDescription)", preferredStyle: .Alert)
-                let okAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
-                alert.addAction(okAction)
-                self.presentViewController(alert, animated: true, completion: nil)
+                else if let response = response {
+                    if ( response.errorCode != "0" || !response.isAuthorized ) {
+                        let session = Session(response: response)
+                        UserData.sharedInstance.session = session
+                        self.presentingViewController?.dismissViewControllerAnimated(true, completion: { () -> Void in
+                            self.loginCompletionHandler?()
+                        })
+                    }
+                    else {
+                        let alert = UIAlertController(title: "Bad response", message: "Code: \(response.errorCode) Message:\(response.responseMessage)", preferredStyle: .Alert)
+                        let okAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+                        alert.addAction(okAction)
+                        self.presentViewController(alert, animated: true, completion: nil)
+                    }
+                }
             }
         )
     }

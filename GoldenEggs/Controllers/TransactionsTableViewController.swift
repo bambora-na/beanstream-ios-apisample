@@ -93,37 +93,35 @@ class TransactionsTableViewController: UITableViewController {
         hud.labelText = "Processing...";
         
         self.transactionRecords.removeAll()
-
-        api.searchTransactions(request,
-            success: { (response) -> Void in
+        
+        api.searchTransactions(request!,
+            completion: { (response, error) -> Void in
                 self.request = nil
-                self.refreshControl?.endRefreshing()
-                // Need to call MBProgressHUD on the main thread
                 dispatch_async(dispatch_get_main_queue(), {
+                    self.refreshControl?.endRefreshing()
                     hud.hide(true)
-                    if ( response.code == 1 ) {
-                        if response.total > 0 {
-                            print("TransactionsTableViewController.refreshTransactions had \(response.total) records")
-                            for detail in response.transactionRecords where detail is BICTransactionDetail {
-                                self.transactionRecords.append(detail as! BICTransactionDetail)
+                    
+                    if let error = error {
+                        UIAlertController.bic_showAlert(self, title: "Search Transaction error", message: "\(error.localizedDescription)")
+                    }
+                    else if let response = response {
+                        if ( response.code == 1 ) {
+                            if response.total > 0 {
+                                print("TransactionsTableViewController.refreshTransactions had \(response.total) records")
+                                for detail in response.transactionRecords where detail is BICTransactionDetail {
+                                    self.transactionRecords.append(detail as! BICTransactionDetail)
+                                }
                             }
                         }
+                        else {
+                            UIAlertController.bic_showAlert(self, title: "Search Transaction issue", message: "\(response.message)")
+                        }
                     }
-                    else {
-                        UIAlertController.bic_showAlert(self, title: "Search Transaction issue", message: "\(response.message)")
-                    }
+                    
                     self.tableView.reloadData()
                 })
-            },
-            failure: { (error) -> Void in
-                self.request = nil
-                self.refreshControl?.endRefreshing()
-                dispatch_async(dispatch_get_main_queue(), {
-                    hud.hide(true)
-                    UIAlertController.bic_showAlert(self, title: "Search Transaction error", message: "\(error.localizedDescription)")
-                    self.tableView.reloadData()
-                })
-        })
+            }
+        )
     }
 
     // Ensure that data is cleared when the user session changes.

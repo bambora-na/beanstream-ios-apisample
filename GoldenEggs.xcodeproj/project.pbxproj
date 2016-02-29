@@ -187,7 +187,6 @@
 		BCC158A51C3F3ED900D974DE /* APIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIHelper.swift; sourceTree = "<group>"; };
 		BCC711AF1C3B1E6E008F6247 /* UIAlertControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtensions.swift; sourceTree = "<group>"; };
 		BCC711B11C3B25A9008F6247 /* LoginHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginHelper.swift; sourceTree = "<group>"; };
-		BCE7E1C41C3C9C30004604C9 /* iSMP.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iSMP.framework; path = Pods/Beanstream.SDK/Beanstream.SDK/iSMP.framework; sourceTree = "<group>"; };
 		BCEC426E1C3EF82100C09F78 /* APISimulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APISimulator.h; sourceTree = "<group>"; };
 		BCEC426F1C3EF82100C09F78 /* BICBeanstreamAPISimulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BICBeanstreamAPISimulator.h; sourceTree = "<group>"; };
 		BCEC42701C3EF82100C09F78 /* BICBeanstreamAPISimulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BICBeanstreamAPISimulator.m; sourceTree = "<group>"; };
@@ -255,7 +254,6 @@
 		781941ABC789F21AD3D0A939 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BCE7E1C41C3C9C30004604C9 /* iSMP.framework */,
 				96029F3469EF7895DF3B5FFB /* Pods.framework */,
 			);
 			name = Frameworks;
@@ -812,6 +810,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -850,6 +849,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;

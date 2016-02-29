@@ -51,7 +51,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         tabBarController.selectedIndex = 1
         tabBarController.selectedIndex = 0
         
-        //APIHelper.api.rootViewController = tabBarController
+        if APIHelper.api.respondsToSelector(Selector("setRootViewController:")) {
+            APIHelper.api.performSelector(Selector("setRootViewController:"), withObject: tabBarController)
+        }
         
         return true
     }
