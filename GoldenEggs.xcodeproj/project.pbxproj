@@ -123,6 +123,8 @@
 		BCEC42941C3EF82100C09F78 /* BICSearchTransactionsSimulator.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEC42841C3EF82100C09F78 /* BICSearchTransactionsSimulator.m */; };
 		BCEC42951C3EF82100C09F78 /* BICUpdatePinPadSimulator.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEC42861C3EF82100C09F78 /* BICUpdatePinPadSimulator.m */; };
 		BCEC42961C3EF82100C09F78 /* BICSimulatorState.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEC42891C3EF82100C09F78 /* BICSimulatorState.m */; };
+		BCF36B0E1C99DCB4005F5742 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCF36B0C1C99DC91005F5742 /* ExternalAccessory.framework */; };
+		BCF36B121C99DCFC005F5742 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCF36B111C99DCFC005F5742 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -213,6 +215,9 @@
 		BCEC42861C3EF82100C09F78 /* BICUpdatePinPadSimulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BICUpdatePinPadSimulator.m; sourceTree = "<group>"; };
 		BCEC42881C3EF82100C09F78 /* BICSimulatorState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BICSimulatorState.h; sourceTree = "<group>"; };
 		BCEC42891C3EF82100C09F78 /* BICSimulatorState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BICSimulatorState.m; sourceTree = "<group>"; };
+		BCF36B0C1C99DC91005F5742 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
+		BCF36B0F1C99DCBD005F5742 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		BCF36B111C99DCFC005F5742 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		CE029903AD277FF5C25AB036 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -221,6 +226,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCF36B121C99DCFC005F5742 /* SystemConfiguration.framework in Frameworks */,
+				BCF36B0E1C99DCB4005F5742 /* ExternalAccessory.framework in Frameworks */,
 				0BE5C9007DCBE52C87E6A885 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,6 +261,8 @@
 		781941ABC789F21AD3D0A939 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BCF36B111C99DCFC005F5742 /* SystemConfiguration.framework */,
+				BCF36B0C1C99DC91005F5742 /* ExternalAccessory.framework */,
 				96029F3469EF7895DF3B5FFB /* Pods.framework */,
 			);
 			name = Frameworks;
