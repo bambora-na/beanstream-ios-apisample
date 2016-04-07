@@ -5,7 +5,7 @@ The purpose of this sample app is to show how to use the Beanstream SDK for iOS.
  
 This image shows a simple e-commerce type app that only sells golden eggs. The user selects the number of golden eggs to purchase, at a price of $1 each. The running total converts to the country currency of the device’s location. A fictitious sales tax of 5% is also added.
  
-This app was written in Swift, to allow the example code to be as concise as possible, and to demonstrate support for Swift. The demo app was setup to use CocoaPoads to automate the management of dependencies. These dependencies include ReactiveCocoa, MBProgessHUD, Money, and most importantly Beanstream.SDK. You also need to manually install an unmanaged dependency called [Beanstream SDK API Simulator](https://github.com/Beanstream-DRWP/beanstream-ios-apisimulator).
+This app was written in Swift, to allow the example code to be as concise as possible, and to demonstrate support for Swift. The demo app was setup to use CocoaPoads to automate the management of dependencies. These dependencies include ReactiveCocoa, MBProgessHUD, Money, and most importantly Beanstream.SDK. You also need to manually install an unmanaged dependency called [Beanstream SDK API Simulator](https://github.com/Beanstream/beanstream-ios-apisimulator).
 
 Note that the Beanstream SDK itself has CocoaPods specified dependencies that include AFNetworking v2.6.0.
 
@@ -18,7 +18,7 @@ The following projects should be cloned into the same root directory.
 ## 1.) Setup Beanstream SDK API Simulator
 
 ```
-> git clone https://github.com/Beanstream-DRWP/beanstream-ios-apisimulator.git
+> git clone https://github.com/Beanstream/beanstream-ios-apisimulator.git
 ```
 
 Note that the default resulting directory name "beanstream-ios-apisimulator" should be maintained for a referenced relative directory path to resolve correctly.
@@ -34,7 +34,7 @@ Note that the default resulting directory name "beanstream-ios-apisimulator" sho
 ## 2.) Setup Beanstream SDK Sample App
 
 ```
-> git clone https://github.com/Beanstream-DRWP/beanstream-ios-apisample.git
+> git clone https://github.com/Beanstream/beanstream-ios-apisample.git
 > cd beanstream-ios-apisample
 > pod install
 > open GoldenEggs.xcworkspace
