@@ -27,8 +27,8 @@ import UIKit
  *
  * Note that the Beanstream SDK itself has CocoaPods specified dependencies that include AFNetworking v2.6.0.
  *
- * > git clone https://github.com/Beanstream-DRWP/beanstream-ios-apisimulator.git
- * > git clone https://github.com/Beanstream-DRWP/beanstream-ios-apisample.git
+ * > git clone https://github.com/Beanstream/beanstream-ios-apisimulator.git
+ * > git clone https://github.com/Beanstream/beanstream-ios-apisample.git
  * > cd beanstream-ios-apisimulator
  * > pod install
  * > open GoldenEggs.xcworkspace
@@ -50,6 +50,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         tabBarController.selectedIndex = 2
         tabBarController.selectedIndex = 1
         tabBarController.selectedIndex = 0
+        
+        let _ = APIHelper() // Allow API Intialization to happen
         
         if APIHelper.api.respondsToSelector(Selector("setRootViewController:")) {
             APIHelper.api.performSelector(Selector("setRootViewController:"), withObject: tabBarController)

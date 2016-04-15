@@ -27,7 +27,7 @@ class UserTableViewController: UITableViewController {
         
         NSNotificationCenter.defaultCenter().addObserver(
             self,
-            selector: "sessionChanged:",
+            selector: #selector(UserTableViewController.sessionChanged(_:)),
             name: Constants.Notifications.sessionChangedNotification,
             object: nil)
     }
@@ -121,7 +121,7 @@ class UserTableViewController: UITableViewController {
     
     func checkLogoutButton() {
         if let _ = UserData.sharedInstance.session {
-            let logoutButton = UIBarButtonItem(title: "Logout", style: UIBarButtonItemStyle.Plain, target: self, action: "logout")
+            let logoutButton = UIBarButtonItem(title: "Logout", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(UserTableViewController.logout))
             self.navigationItem.setRightBarButtonItem(logoutButton, animated: true)
         }
         else {

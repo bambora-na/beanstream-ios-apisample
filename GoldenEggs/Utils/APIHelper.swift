@@ -8,14 +8,14 @@
 
 class APIHelper {
     
-    //static let api = BICBeanstreamAPI()
+    //static let api: BICBeanstreamAPI = BICBeanstreamAPI()
     static let api = BICBeanstreamAPISimulator()
 
     private var once = dispatch_once_t()
     
     init () {
         dispatch_once(&once) {
-            //NSUserDefaults.standardUserDefaults().setObject("stableweb01", forKey: "bicSubdomainDev")
+            NSUserDefaults.standardUserDefaults().setObject("master", forKey:"bicSubdomainDev")
         }
     }
     

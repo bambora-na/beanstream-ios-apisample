@@ -53,5 +53,14 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UISupportedExternalAccessoryProtocols</key>
+	<array>
+        <string>com.ingenico.easypayemv.printer</string>
+        <string>com.ingenico.easypayemv.barcodereader</string>
+        <string>com.ingenico.easypayemv.spm-transaction</string>
+        <string>com.ingenico.easypayemv.spm-configuration</string>
+        <string>com.ingenico.easypayemv.spm-networkaccess</string>
+        <string>com.ingenico.easypayemv.spm-sppchannel</string>
+    </array>
 </dict>
 </plist>

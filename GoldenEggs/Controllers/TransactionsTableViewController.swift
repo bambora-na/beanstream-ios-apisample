@@ -26,7 +26,7 @@ class TransactionsTableViewController: UITableViewController {
         
         NSNotificationCenter.defaultCenter().addObserver(
             self,
-            selector: "sessionChanged:",
+            selector: #selector(TransactionsTableViewController.sessionChanged(_:)),
             name: Constants.Notifications.sessionChangedNotification,
             object: nil)
 
@@ -34,7 +34,7 @@ class TransactionsTableViewController: UITableViewController {
         self.refreshControl = UIRefreshControl()
         self.refreshControl?.backgroundColor = Constants.Colors.secondaryColor
         self.refreshControl?.tintColor = Constants.Colors.mainColor
-        self.refreshControl?.addTarget(self, action: "refreshTransactions", forControlEvents: UIControlEvents.ValueChanged)
+        self.refreshControl?.addTarget(self, action: #selector(TransactionsTableViewController.refreshTransactions), forControlEvents: UIControlEvents.ValueChanged)
     }
 
     override func viewDidAppear(animated: Bool) {

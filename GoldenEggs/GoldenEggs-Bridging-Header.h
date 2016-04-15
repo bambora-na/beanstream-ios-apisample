@@ -17,4 +17,6 @@
 #import "BICAbandonSessionResponse.h"
 #import "BICReceiptResponse.h"
 
+#import "BICInitPinPadResponse.h"
+
 #import "BICBeanstreamAPISimulator.h"

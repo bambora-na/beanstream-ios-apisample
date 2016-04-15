@@ -114,6 +114,13 @@ class MainViewController: UIViewController {
 
         let cancelAction: UIAlertAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
         actionSheet.addAction(cancelAction)
+        
+        if let button = sender as? UIButton {
+            if UIDevice.currentDevice().userInterfaceIdiom == .Pad {
+                actionSheet.popoverPresentationController?.sourceView = button
+                actionSheet.popoverPresentationController?.sourceRect = button.bounds
+            }
+        }
 
         self.presentViewController(actionSheet, animated: true, completion: nil)
     }
@@ -123,6 +130,21 @@ class MainViewController: UIViewController {
 
         if !emvConnected {
             api.connectToPinPad()
+            
+            let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+            hud.labelText = "Initializing Pin Pad...";
+            
+            api.initializePinPad({ (response, error) -> Void in
+                // Need to call MBProgressHUD on the main thread
+                dispatch_async(dispatch_get_main_queue(), {
+                    hud.hide(true)
+                    
+                    if let error = error {
+                        UIAlertController.bic_showAlert(self, title: "Initialize Pin Pad error", message: "\(error.localizedDescription)")
+                    }
+                })
+            })
+            
             emvConnectButton.setImage(UIImage(named: "pinpad_connected"), forState: .Normal)
         }
         else {
@@ -143,6 +165,7 @@ class MainViewController: UIViewController {
             request.amount = cartController?.subtotalAsMoney().amount
             request.tax1Price = cartController?.taxAsMoney(subtotal).amount
             request.transType = "P"
+            request.emvEnabled = bicPaymentMethod == BIC_EMV_PAYMENT_METHOD ? true : false;
             
             let bicLineItems = NSMutableArray()
             for item in lineItems {

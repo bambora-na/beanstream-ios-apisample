@@ -26,7 +26,7 @@ class ReceiptViewController: UIViewController {
         
         NSNotificationCenter.defaultCenter().addObserver(
             self,
-            selector: "sessionChanged:",
+            selector: #selector(ReceiptViewController.sessionChanged(_:)),
             name: Constants.Notifications.sessionChangedNotification,
             object: nil)
     }
