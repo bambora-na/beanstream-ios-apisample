@@ -187,7 +187,7 @@ class MainViewController: UIViewController {
             api.processTransaction(request,
                 emvEnableTips: false,
                 emvTipPresets: nil,
-                completion: { (response, error) -> Void in
+                completion: { (response, error, updateKeyfile) -> Void in
                     // Need to call MBProgressHUD on the main thread
                     dispatch_async(dispatch_get_main_queue(), {
                         hud.hide(true)
