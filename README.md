@@ -31,7 +31,7 @@ password <PASSWORD>
 Add the Beanstream Partner/Artifactory repo.
 
 ```
-pod repo-art add beanstream-partner "https://beanstream.artifactoryonline.com/beanstream/api/pods/beanstream-partner"
+> pod repo-art add beanstream-partner "https://beanstream.artifactoryonline.com/beanstream/api/pods/beanstream-partner"
 ```
 
 The following projects should be cloned into the same root directory.
