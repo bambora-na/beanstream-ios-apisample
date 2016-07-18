@@ -11,7 +11,7 @@ Note that the Beanstream SDK itself has CocoaPods specified dependencies that in
 
 To be able to compile this project you can clone the git source repo to a working directory. As dependencies you will also need to clone the Beanstream API Simulator repo and then ensure all other dependencies are installed via CocoaPods.
 
-Prerequisites:
+## 1.) Prerequisites:
 
 First install [CocoaPods](https://cocoapods.org) and a plug-in to access our Artifactory repository.
 
@@ -36,7 +36,7 @@ Add the Beanstream Partner/Artifactory repo.
 
 The following projects should be cloned into the same root directory.
 
-## 1.) Setup Beanstream SDK API Simulator
+## 2.) Setup Beanstream SDK API Simulator
 
 ```
 > git clone https://github.com/Beanstream/beanstream-ios-apisimulator.git
