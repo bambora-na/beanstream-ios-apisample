@@ -8,15 +8,8 @@
 
 class APIHelper {
     
+    /* Comment out one of the lines below to switch between simulator and api */
+    
     //static let api: BICBeanstreamAPI = BICBeanstreamAPI()
     static let api = BICBeanstreamAPISimulator()
-
-    private var once = dispatch_once_t()
-    
-    init () {
-        dispatch_once(&once) {
-            NSUserDefaults.standardUserDefaults().setObject("master", forKey:"bicSubdomainDev")
-        }
-    }
-    
 }
